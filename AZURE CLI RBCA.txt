@@ -1,7 +1,9 @@
 az ad sp create-for-rbac --name "githubaction" --role contributor --scopes /subscriptions/a8868927-214e-4df6-b328-c58e212825bf/resourceGroups/test --sdk-auth
+
+
 {
   "clientId": "eb22eb07-f19b-4350-b2a9-6d158e82b98e",
-  "clientSecret": "YSwG83Vc2kViWf2a2SzkQ.Tcxy7F~f2AhG",
+  "clientSecret": "nyLr4Ht2LXUitrJIUWp-3nfyXN0~tOaA7f",
   "subscriptionId": "a8868927-214e-4df6-b328-c58e212825bf",
   "tenantId": "430697dc-6e90-4e92-94bf-abb0598620d8",
   "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
@@ -25,5 +27,5 @@ VARIABLE DE AMBIENTE SECRETS ->
 * AZURE_CREDENTIALS
 * DOCKER_PASSWORD
 * DOCKER_USERNAME
-* DOCKER_USERNAME
 * REGISTRY_USERNAME
+* REGISTRY_PASSWORD

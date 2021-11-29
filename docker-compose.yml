@@ -3,10 +3,10 @@ version: "3.3"
 services:
   nextjs:
     ports:
-      - 3000:3000
+      - 80
     build:
       context: . # Ubicacion del directorio central donde Construira la Imagen
-      dockerfile: Dockerfile.dev # Dockerfile -> Parametros [ Dev o Prod ]
+      dockerfile: Dockerfile # Dockerfile -> Parametros [ Dev o Prod ]
     volumes:
       - ./:/usr/src/app # Compara Path Local con Path de Contenedor Checa si hay cambios
       - /usr/src/app/node_modules # Checa si hay cambios
