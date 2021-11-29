@@ -47,7 +47,6 @@ jobs:
         run: npx semantic-release
 
       - name: "Login via Azure CLI"
-        if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
         uses: azure/login@v1
         with:
           credentials: ${{ secrets.AZURE_CREDENTIALS }}
@@ -70,4 +69,4 @@ jobs:
           registry-username: ${{ secrets.REGISTRY_USERNAME }}
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
           name: katchvidal-container
-          location: "west us"
+          location: "west us 2"
