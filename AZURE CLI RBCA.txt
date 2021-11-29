@@ -1,18 +1,4 @@
-az ad sp create-for-rbac --name "githubaction" --role contributor --scopes /subscriptions/a8868927-214e-4df6-b328-c58e212825bf/resourceGroups/test --sdk-auth
-
-
-{
-  "clientId": "eb22eb07-f19b-4350-b2a9-6d158e82b98e",
-  "clientSecret": "nyLr4Ht2LXUitrJIUWp-3nfyXN0~tOaA7f",
-  "subscriptionId": "a8868927-214e-4df6-b328-c58e212825bf",
-  "tenantId": "430697dc-6e90-4e92-94bf-abb0598620d8",
-  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
-  "resourceManagerEndpointUrl": "https://management.azure.com/",
-  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
-  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
-  "galleryEndpointUrl": "https://gallery.azure.com/",
-  "managementEndpointUrl": "https://management.core.windows.net/"
-}
+az ad sp create-for-rbac --name "githubaction" --role contributor --scopes /subscriptions/id de la sucribcion/resourceGroups/nombre del grupo de recurso --sdk-auth
 
 
 CONTENDOR DE REGISTRO 
