@@ -30,15 +30,15 @@ jobs:
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
       - run: |
-          docker build . -t katchvidal.azurecr.io/nextjsapp:${{ github.sha }}
-          docker push katchvidal.azurecr.io/nextjsapp:${{ github.sha }}
+          docker build . -t katch.azurecr.io/nextjsapp:${{ github.sha }}
+          docker push katch.azurecr.io/nextjsapp:${{ github.sha }}
 
       - name: "Deploy to Azure Container Instances"
         uses: "azure/aci-deploy@v1"
         with:
           resource-group: test02
           dns-name-label: katchvidal
-          image: katchvidal.azurecr.io/nextjsapp:${{ github.sha }}
+          image: katch.azurecr.io/nextjsapp:${{ github.sha }}
           registry-username: ${{ secrets.REGISTRY_USERNAME }}
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
           name: katch-container
