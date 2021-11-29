@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 
 # Installing dependencies -> Docker Use a package.json y package-lock.json and install
 COPY package*.json /usr/src/app/
-RUN npm install
+RUN yarn install
 
 # Copying source files -> Docker copia el Codigo [Path -> . ] al File Container
 COPY . /usr/src/app
