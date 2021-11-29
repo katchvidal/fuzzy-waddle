@@ -1,7 +1,7 @@
 az ad sp create-for-rbac --name "GithubContainerTest" --role contributor --scopes /subscriptions/a8868927-214e-4df6-b328-c58e212825bf/resourceGroups/GITHUBACTIONS-RG
 
 {
-  "appId": "57eea70a-837f-4574-bcc1-a1781d0b4657",
+  "appId": "a8868927-214e-4df6-b328-c58e212825bf",
   "displayName": "GithubContainerTest",
   "name": "57eea70a-837f-4574-bcc1-a1781d0b4657",
   "password": "QDcKgcsnRO0pNKCkaWJs0uqQ_-nobm3AdZ",
