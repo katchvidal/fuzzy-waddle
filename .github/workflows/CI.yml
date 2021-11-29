@@ -56,7 +56,7 @@ jobs:
         uses: "azure/aci-deploy@v1"
         with:
           resource-group: test
-          dns-name-label: katchvidal.azurecr.io
+          #dns-name-label: katchvidal.azurecr.io
           image: katchvidal.azurecr.io/nextjsapp:${{ github.sha }}
           registry-username: ${{ secrets.REGISTRY_USERNAME }}
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
