@@ -15,7 +15,7 @@ RUN npm install
 COPY . /usr/src/app
 
 # Building app -> Docker Compile [ npm run build ] y abre el puerto 3000
-RUN npm run build
+#RUN npm run build
 EXPOSE 3000
 
 # Running the app -> Docker ejecute en entorno de desarrollo [ npm run dev ]

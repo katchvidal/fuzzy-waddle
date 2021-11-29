@@ -1,11 +1,15 @@
-az ad sp create-for-rbac --name "GithubContainerTest" --role contributor --scopes /subscriptions/a8868927-214e-4df6-b328-c58e212825bf/resourceGroups/GITHUBACTIONS-RG
-
+az ad sp create-for-rbac --name "githubaction" --role contributor --scopes /subscriptions/a8868927-214e-4df6-b328-c58e212825bf/resourceGroups/test --sdk-auth
 {
-  "appId": "a8868927-214e-4df6-b328-c58e212825bf",
-  "displayName": "GithubContainerTest",
-  "name": "57eea70a-837f-4574-bcc1-a1781d0b4657",
-  "password": "QDcKgcsnRO0pNKCkaWJs0uqQ_-nobm3AdZ",
-  "tenant": "430697dc-6e90-4e92-94bf-abb0598620d8"
+  "clientId": "eb22eb07-f19b-4350-b2a9-6d158e82b98e",
+  "clientSecret": "YSwG83Vc2kViWf2a2SzkQ.Tcxy7F~f2AhG",
+  "subscriptionId": "a8868927-214e-4df6-b328-c58e212825bf",
+  "tenantId": "430697dc-6e90-4e92-94bf-abb0598620d8",
+  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+  "resourceManagerEndpointUrl": "https://management.azure.com/",
+  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+  "galleryEndpointUrl": "https://gallery.azure.com/",
+  "managementEndpointUrl": "https://management.core.windows.net/"
 }
 
 
