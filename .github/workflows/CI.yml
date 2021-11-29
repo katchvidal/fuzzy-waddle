@@ -46,11 +46,6 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
 
-      - name: "Login via Azure CLI"
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
       - uses: azure/docker-login@v1
         with:
           login-server: katchvidal.azurecr.io
@@ -59,14 +54,3 @@ jobs:
       - run: |
           docker build . -t katchvidal.azurecr.io/nextjsapp:${{ github.sha }}
           docker push katchvidal.azurecr.io/nextjsapp:${{ github.sha }}
-
-      - name: "Deploy to Azure Container Instances"
-        uses: "azure/aci-deploy@v1"
-        with:
-          resource-group: GITHUBACTIONS-RG
-          dns-name-label: katchvidal.azurecr.io
-          image: katchvidal.azurecr.io/nextjsapp:${{ github.sha }}
-          registry-username: ${{ secrets.REGISTRY_USERNAME }}
-          registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-          name: katchvidal-container
-          location: "west us 2"
