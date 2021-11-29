@@ -47,6 +47,7 @@ jobs:
         run: npx semantic-release
 
       - name: "Login via Azure CLI"
+        if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
         uses: azure/login@v1
         with:
           credentials: ${{ secrets.AZURE_CREDENTIALS }}
