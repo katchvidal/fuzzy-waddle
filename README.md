@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![Deploy Container Azure Instances](https://github.com/katchvidal/fuzzy-waddle/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/katchvidal/fuzzy-waddle/actions/workflows/CI.yml)
 
-## Getting Started
+## Aplicacion de NextJS -> With Yarn
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+```
+    * DockerFile
+    * Docker-Compose.Yml
+    * Deploy in Azure
+    * Actions de Github Automatiza el Proceso de Deploy in Azure
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Variables de Ambiente en Github Secrets
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+    VARIABLE DE AMBIENTE SECRETS ->
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+    * ACTIONS_RUNNER_DEBUG
+    * ACTIONS_STEP_DEBUG
+    * AZURE_CREDENTIALS
+    * DOCKER_PASSWORD
+    * DOCKER_USERNAME
+    * REGISTRY_USERNAME
+    * REGISTRY_PASSWORD
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+# Azure RBAC -< IAM >
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+    * az ad sp create-for-rbac --name "githubaction" --role contributor --scopes /subscriptions/a8868927-214e-4df6-b328-c58e212825bf/resourceGroups/test --sdk-auth
+    * Return a JSON with a Credentials
+    * -> Secret -> AZURE_CREDENTIALS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
