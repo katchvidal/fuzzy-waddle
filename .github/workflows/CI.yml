@@ -36,7 +36,7 @@ jobs:
       - name: "Deploy to Azure Container Instances"
         uses: "azure/aci-deploy@v1"
         with:
-          resource-group: test
+          resource-group: test02
           dns-name-label: katchvidal
           image: katchvidal.azurecr.io/nextjsapp:${{ github.sha }}
           registry-username: ${{ secrets.REGISTRY_USERNAME }}
