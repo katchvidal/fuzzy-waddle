@@ -13,7 +13,7 @@
 
 ```
 
-    VARIABLE DE AMBIENTE SECRETS ->
+    ENV SECRETS ->
 
     * ACTIONS_RUNNER_DEBUG
     * ACTIONS_STEP_DEBUG
@@ -28,8 +28,17 @@
 # Azure RBAC -< IAM >
 
 ```
-    * az ad sp create-for-rbac --name "githubaction" --role contributor --scopes /subscriptions/a8868927-214e-4df6-b328-c58e212825bf/resourceGroups/test --sdk-auth
+    * az ad sp create-for-rbac --name "<name for RBAC" --role contributor --scopes /subscriptions/<subscription-id>/resourceGroups/<Resource Gruop Name> --sdk-auth
     * Return a JSON with a Credentials
-    * -> Secret -> AZURE_CREDENTIALS
+    * Paste the Json -> Inside Github -> Secrets -> AZURE_CREDENTIALS
+    * TIP IF YOU WONT THIS WORKS YOU MAY NEED TO CREATE A NEW RESOURCE GRUOP I DONT KNOW WHY NOT WORK IN REPEATLY COMANDLINE RESOURCE GRUOP
 
+```
+
+# Create a Azure Registry
+
+```
+    You need to give github Secrets the following:
+    * Registry Name
+    * Registry Password
 ```
