@@ -1,4 +1,4 @@
-[![Deploy Container Azure Instances](https://github.com/katchvidal/fuzzy-waddle/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/katchvidal/fuzzy-waddle/actions/workflows/CI.yml)
+[![Deploy Container Azure Instances](https://github.com/katchvidal/fuzzy-waddle/actions/workflows/CI.yml/badge.svg)](https://github.com/katchvidal/fuzzy-waddle/actions/workflows/CI.yml)
 
 ## Aplicacion de NextJS -> With Yarn
 
