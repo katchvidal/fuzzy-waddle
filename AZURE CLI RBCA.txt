@@ -15,9 +15,9 @@ az ad sp create-for-rbac --name "githubaction" --role contributor --scopes /subs
 
 
 CONTENDOR DE REGISTRO 
-login-server: katchvidal.azurecr.io
+login-server: .io
 location: west us 2
-resource group: GITHUBACTIONS-RG
+resource group: ONS-RG
 
 VARIABLE DE AMBIENTE SECRETS ->
 
